@@ -1,0 +1,141 @@
+:root {
+  --ah-navy: #041833;
+  --ah-midnight: #062f4f;
+  --ah-sand: #f5c451;
+  --ah-ice: #eef4ff;
+  --ah-slate: #4f5d75;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #1d2433;
+  background-color: #f7f8fb;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', 'Inter', serif;
+  color: var(--ah-midnight);
+}
+
+.topbar {
+  background: linear-gradient(90deg, var(--ah-navy), var(--ah-midnight));
+  font-size: 0.95rem;
+}
+
+.navbar {
+  transition: box-shadow 0.3s ease;
+}
+
+.hero {
+  background: linear-gradient(120deg, rgba(4, 24, 51, 0.85), rgba(6, 47, 79, 0.65)), url('../img/leistungen.jpg') center/cover;
+  min-height: 75vh;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(4, 24, 51, 0.25), rgba(4, 24, 51, 0.85));
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.service-card {
+  position: relative;
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+  overflow: hidden;
+  min-height: 310px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 20px 40px rgba(4, 24, 51, 0.18);
+}
+
+.service-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(4, 24, 51, 0.1), rgba(4, 24, 51, 0.85));
+}
+
+.service-overlay {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 1rem;
+}
+
+.download-card {
+  background: #fff;
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+  box-shadow: 0 10px 25px rgba(4, 24, 51, 0.08);
+}
+
+.download-card a {
+  color: var(--ah-midnight);
+  font-weight: 500;
+}
+
+.download-card a:hover {
+  color: var(--ah-sand);
+}
+
+.team-card {
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 20px 40px rgba(4, 24, 51, 0.08);
+  overflow: hidden;
+  height: 100%;
+}
+
+.team-photo {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+#formTabs .nav-link {
+  border-radius: 999px;
+  padding: 0.75rem 1.5rem;
+  color: var(--ah-midnight);
+  border: 1px solid rgba(4, 24, 51, 0.15);
+}
+
+#formTabs .nav-link.active {
+  background: var(--ah-midnight);
+  color: #fff;
+}
+
+.card {
+  border: none;
+  border-radius: 1.25rem;
+}
+
+.ratio iframe {
+  border: 0;
+}
+
+footer a {
+  transition: opacity 0.2s ease;
+}
+
+footer a:hover {
+  opacity: 0.7;
+}
+
+@media (max-width: 992px) {
+  .hero {
+    min-height: auto;
+  }
+
+  .team-photo {
+    height: 220px;
+  }
+}
